@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Helmet Cam 3</title>
+  </head>
+  <body>
+    <h1>Helmet Cam 3</h1>
+	<script> 
+		function sendTimeToServer(){
+			var time = new Date();
+	    		var i = document.createElement("img");
+	    		i.src = "/getTime?time=" + time;
+	    		document.getElementById("time").innerHTML = time;
+		}
+	</script>
+	<button onclick="sendTimeToServer()">update time</button>
+	<div id="time">Time: </div>
+	<img src="{{ url_for('video_feed') }}" style="position:absolute; left:0px;" width="100%">
+	<img src="{{ url_for('colour') }}" style="position:absolute; left:0px; opacity:0.01" width="100%">
+  </body>
+</html>
+
