@@ -11,7 +11,7 @@
 
 ## System architecture guidelines
 
-+ Lowest common denominator parts
++ Lowest common denominator parts 
 ++ COTS if available
 + 3V3 control bus
 ++ Avoid 5V, though many 5V MCU can be run at 3V3
